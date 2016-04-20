@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B42B1B5D-CF2A-4511-B6D2-272CC9FFBD0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CampingReservation</RootNamespace>
+    <AssemblyName>CampingReservation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon_32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\workspace\Platform\trunk\OzWiz\Dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Reservation.cs" />
+    <Compile Include="Frm\Strawberry\Hantan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\Hantan.Designer.cs">
+      <DependentUpon>Hantan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\ZaraSeum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\ZaraSeum.Designer.cs">
+      <DependentUpon>ZaraSeum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Reservation\ReservationCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Reservation\ReservationCancel.Designer.cs">
+      <DependentUpon>ReservationCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\Yuenin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\Yuenin.Designer.cs">
+      <DependentUpon>Yuenin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\Yain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\Yain.Designer.cs">
+      <DependentUpon>Yain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ClientManager.cs" />
+    <Compile Include="Entity\ClientInfo.cs" />
+    <Compile Include="Frm\Strawberry\JungrangReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\JungrangReservation.Designer.cs">
+      <DependentUpon>JungrangReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\YoungInReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\YoungInReservation.Designer.cs">
+      <DependentUpon>YoungInReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\GangDongReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\GangDongReservation.Designer.cs">
+      <DependentUpon>GangDongReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Strawberry\WorldCupParkReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Strawberry\WorldCupParkReservation.Designer.cs">
+      <DependentUpon>WorldCupParkReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Reservation\ReservationCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Reservation\ReservationCheck.Designer.cs">
+      <DependentUpon>ReservationCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\GCMManager.cs" />
+    <Compile Include="Util\RSACrypto.cs" />
+    <Compile Include="Util\SoapClient.cs" />
+    <Compile Include="Manager\SoapManager.cs" />
+    <Compile Include="Worker\SoapBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frm\ChukRongReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\ChukRongReservation.Designer.cs">
+      <DependentUpon>ChukRongReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\BaseReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\BaseReservation.Designer.cs">
+      <DependentUpon>BaseReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\ReservationType.cs" />
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\SiteEntity.cs" />
+    <Compile Include="Manager\SiteEntityManager.cs" />
+    <Compile Include="Frm\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm\ChukRongReservation.resx">
+      <DependentUpon>ChukRongReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\BaseReservation.resx">
+      <DependentUpon>BaseReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Strawberry\Hantan.resx">
+      <DependentUpon>Hantan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Strawberry\YoungInReservation.resx">
+      <DependentUpon>YoungInReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Strawberry\GangDongReservation.resx">
+      <DependentUpon>GangDongReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Strawberry\WorldCupParkReservation.resx">
+      <DependentUpon>WorldCupParkReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Reservation\ReservationCancel.resx">
+      <DependentUpon>ReservationCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Reservation\ReservationCheck.resx">
+      <DependentUpon>ReservationCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Frm\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.ArrayOfAnyType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.AuthenticationMobilePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookAfterApprovalCashSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookingByGroupNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookingByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookingByTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentBy3DResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByGeneralCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByISPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByMobileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByRealAccountKFTCByAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByRealAccountKFTCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.BookPaymentByVirtualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.CalBongGetMyPageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBaseDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBoardScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBookDetailByOptionSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBookDetailByTicketRefundResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBookDetailByTicketSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetBookRefundedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetCardSequenceNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetCommonByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetCustomerCMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetDrawEndDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberDiscountDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberExistsByMobileNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberExistsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberIdByMobileNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberIdCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberKindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberLoginByGuestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMemberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetMyPageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetPostalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductByBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductBySeatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductByTimeTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductFilterListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductGroupByBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductImageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetProductOptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetScheduleByBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetScheduleByGroupMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetScheduleByGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetScheduleByTimeTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetShopPaymentByWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetSystemDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetUnMemberCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.GetUnMemberLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.LodgingRefundByWeb2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.LodgingRefundByWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.MemberJoinByIPinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.MemberJoinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.MobileCertificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.RealNameCertificationOtherResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.RealNameCertificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.Refund2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.RefundResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveBankInfomationOrCarNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveBookByBankInformationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveMemberByEditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveMemberByWithdrawResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveMemberCertificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveMemberDiscountCancelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SaveMemberDiscountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\CampingReservation.ServiceReference1.SendMemberPwResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\FlexService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon_32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
