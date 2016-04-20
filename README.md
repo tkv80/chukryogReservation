@@ -8,8 +8,6 @@
 
 ![mybatis-spring](http://mybatis.github.io/images/mybatis-logo.png)
 
-chukryog cmaping Reservation
-
 Essentials
 ----------
 
